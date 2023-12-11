@@ -39,3 +39,11 @@ df_countries, df_years = read_csv_and_transpose('API_19_DS2_en_csv_v2_4700503-Co
 # Using pandas describe function to calculate statistical properties for five countries
 print("\nCalculating describe of Methane emissions (% change from 1990) for five different countries")
 print('\nDescribe\n', df_years.iloc[4:, [31, 107, 183, 259, 335]].describe())
+
+# Calculating mean using numpy for five countries
+print("\nCalculating mean of Methane emissions (% change from 1990) for five different countries")
+print('\nMean\n', np.mean(df_years.iloc[4:, [31, 107, 183, 259, 335]]))
+
+# Calculating standard deviation using numpy for five countries
+print("\nCalculating Standard Deviation of Methane emissions (% change from 1990) for five different countries")
+print('\nStandard Deviation\n', np.std(df_years.iloc[4:, [31, 107, 183, 259, 335]]))
