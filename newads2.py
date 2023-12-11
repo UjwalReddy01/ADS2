@@ -47,3 +47,15 @@ print('\nMean\n', np.mean(df_years.iloc[4:, [31, 107, 183, 259, 335]]))
 # Calculating standard deviation using numpy for five countries
 print("\nCalculating Standard Deviation of Methane emissions (% change from 1990) for five different countries")
 print('\nStandard Deviation\n', np.std(df_years.iloc[4:, [31, 107, 183, 259, 335]]))
+
+print("\nCalculating Kurtosis of population growth (annual %) indicator for three countries")
+
+# Calculating kurtosis using scipy.stats for Belgium
+print('\nKurtosis of Belgium :', st.kurtosis(df_countries.iloc[4, 4:]))
+
+# Calculating kurtosis using scipy.stats for Bulgaria
+print('Kurtosis of Bulgaria :', st.kurtosis(df_countries.iloc[100, 4:]))
+
+# Calculating kurtosis using scipy.stats for Colombia
+print('Kurtosis of Colombia :', st.kurtosis(df_countries.iloc[200, 4:]))
+
