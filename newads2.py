@@ -95,3 +95,13 @@ plt.yticks([0, 1, 2, 3, 4, 5, 6], ['Urban population',
                                 'Arable land',
                                 'Agricultural land'], fontsize=30)
 
+# Plotting line graph of average Methane Emission for five countries
+plt.figure(figsize=(40, 40))
+plt.rcParams.update({'font.size': 60})
+plt.plot(np.mean(df_years.iloc[4:, [31, 107, 183, 259, 335]]), label='Methane emission', linewidth=20)
+plt.xlabel('\nCountries', fontsize=60)
+plt.ylabel('\nMean of Methane emissions (% change from 1990)', fontsize=60)
+plt.title('Average Methane emission of five countries', fontsize=70)
+plt.legend()
+plt.show()
+
