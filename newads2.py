@@ -34,4 +34,8 @@ def read_csv_and_transpose(input_file, selected_countries):
 # Calling the function to produce two dataframes by choosing a few countries
 df_countries, df_years = read_csv_and_transpose('API_19_DS2_en_csv_v2_4700503-Copy.csv', ['Belgium', 'Bulgaria', 'Colombia', 'Finland', 'United Kingdom'])
 
+# Calculating and comparing statistical properties for five different countries comparing different indicators
 
+# Using pandas describe function to calculate statistical properties for five countries
+print("\nCalculating describe of Methane emissions (% change from 1990) for five different countries")
+print('\nDescribe\n', df_years.iloc[4:, [31, 107, 183, 259, 335]].describe())
