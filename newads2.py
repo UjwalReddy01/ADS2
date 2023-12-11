@@ -118,3 +118,12 @@ plt.title('Co2 emission over years for Belgium', fontsize=20)
 plt.legend(fontsize=10, loc='upper right')
 plt.show()
 
+# Plotting pie chart of electric power consumption over the years (1976-1985)
+plt.figure(figsize=(30, 30))
+plt.rcParams.update({'font.size': 34})
+years = ['1976', '1977', '1978', '1979', '1980', '1981', '1982', '1983', '1984', '1985']
+plt.pie(df_countries.iloc[50, 20:30], labels=years, autopct='%1.1f%%')
+plt.legend(loc='upper right')
+plt.title('Electric power consumption (kWh per capita)', fontsize=55)
+plt.show()
+
