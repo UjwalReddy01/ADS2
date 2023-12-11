@@ -59,3 +59,14 @@ print('Kurtosis of Bulgaria :', st.kurtosis(df_countries.iloc[100, 4:]))
 # Calculating kurtosis using scipy.stats for Colombia
 print('Kurtosis of Colombia :', st.kurtosis(df_countries.iloc[200, 4:]))
 
+print("\nCalculating Skewness of population growth (annual %) indicator for three countries")
+# Calculating skewness using scipy.stats for Belgium
+print('\nSkewness of Belgium :', st.skew(df_countries.iloc[4, 4:]))
+
+# Calculating skewness using scipy.stats for Bulgaria
+print('Skewness of Bulgaria :', st.skew(df_countries.iloc[100, 4:]))
+
+# Calculating skewness using scipy.stats for Colombia
+print('Skewness of Colombia :', st.skew(df_countries.iloc[200, 4:]))
+
+
