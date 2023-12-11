@@ -127,3 +127,6 @@ plt.legend(loc='upper right')
 plt.title('Electric power consumption (kWh per capita)', fontsize=55)
 plt.show()
 
+# Plotting graph of Energy use (kg of oil equivalent per capita) for five countries
+plt.figure(figsize=(40, 40))
+
