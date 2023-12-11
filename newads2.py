@@ -31,4 +31,7 @@ def read_csv_and_transpose(input_file, selected_countries):
     print(transpose)
     return df_countries, df_years
 
+# Calling the function to produce two dataframes by choosing a few countries
+df_countries, df_years = read_csv_and_transpose('API_19_DS2_en_csv_v2_4700503-Copy.csv', ['Belgium', 'Bulgaria', 'Colombia', 'Finland', 'United Kingdom'])
+
 
