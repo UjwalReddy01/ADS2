@@ -129,4 +129,22 @@ plt.show()
 
 # Plotting graph of Energy use (kg of oil equivalent per capita) for five countries
 plt.figure(figsize=(40, 40))
+plt.rcParams.update({'font.size': 50})
 
+# Plotting data for each country
+plt.plot(df_countries.iloc[50, 20:25], label='Belgium', linewidth=15)
+plt.plot(df_countries.iloc[126, 20:25], label='Bulgaria', linewidth=15)
+plt.plot(df_countries.iloc[202, 20:25], label='Colombia', linewidth=15)
+plt.plot(df_countries.iloc[278, 20:25], label='Finland', linewidth=15)
+plt.plot(df_countries.iloc[354, 20:25], label='United Kingdom', linewidth=15)
+
+# Adding labels and title
+plt.xlabel('\nYears', fontsize=65)
+plt.ylabel('\nEnergy use (kg of oil equivalent per capita)', fontsize=65)
+plt.title('\nEnergy use (kg of oil equivalent per capita) for Five Countries', fontsize=65)
+
+# Adding legend
+plt.legend()
+
+# Display the plot
+plt.show()
