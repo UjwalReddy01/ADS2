@@ -69,4 +69,9 @@ print('Skewness of Bulgaria :', st.skew(df_countries.iloc[100, 4:]))
 # Calculating skewness using scipy.stats for Colombia
 print('Skewness of Colombia :', st.skew(df_countries.iloc[200, 4:]))
 
+# Calculating correlation between indicators for Belgium and Bulgaria
+correlation_df = df_countries.iloc[[2, 4, 50, 38, 43, 74, 75, 78, 80, 126, 114], 5:12]
+print('\nPearson Correlation \n', correlation_df.corr())
+# Defining correlation using Kendall method
+print('\nKendall Correlation \n', correlation_df.corr(method='kendall'))
 
