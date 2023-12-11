@@ -75,3 +75,23 @@ print('\nPearson Correlation \n', correlation_df.corr())
 # Defining correlation using Kendall method
 print('\nKendall Correlation \n', correlation_df.corr(method='kendall'))
 
+# Plotting heat map to calculate correlation between indicators
+plt.figure(figsize=(15, 15))
+cbm = plt.imshow(correlation_df.corr(), aspect='auto')
+cb = plt.colorbar(cbm)
+cb.set_label('Correlation Range', fontsize=60)
+plt.xticks([0, 1, 2, 3, 4, 5, 6], ['Urban population',
+                                'Population, total',
+                                'Energy use',
+                                'CO2 emissions from solid fuel consumption',
+                                'CO2 emissions from liquid fuel consumption',
+                                'Arable land',
+                                'Agricultural land'], rotation=90, fontsize=30)
+plt.yticks([0, 1, 2, 3, 4, 5, 6], ['Urban population',
+                                'Population, total',
+                                'Energy use',
+                                'CO2 emissions from solid fuel consumption',
+                                'CO2 emissions from liquid fuel consumption',
+                                'Arable land',
+                                'Agricultural land'], fontsize=30)
+
